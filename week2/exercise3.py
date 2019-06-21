@@ -205,6 +205,7 @@ def loops_6():
             list2.append(str(b))
         list1.append(list2)
     return list1
+    
 
 
 def loops_7():
