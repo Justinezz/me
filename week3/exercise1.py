@@ -13,10 +13,12 @@ def loop_ranger(start, stop=None, step=1):
     function, but we'd like you to do it the long way, probably using a loop.
     """
   
-    while start < stop:
-        list.append(start)
-        start += 1
-    return list
+    new_list = []
+
+    for i in range(start, stop, step):
+        new_list.append(i)
+
+    return new_list
 
 
 def lone_ranger(start, stop, step):
@@ -24,10 +26,8 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    list = [start, stop, step]
-    for i in range():
-        print(i)
-    return list
+    
+    return range(start, stop, step)
 
 
 def two_step_ranger(start, stop):
@@ -37,8 +37,7 @@ def two_step_ranger(start, stop):
     Make a range function that always has a step size of 2
     """
     
-    list = [start, stop]
-    return list
+    return range(start, stop, 2)
 
 
 def stubborn_asker(low, high):
@@ -49,8 +48,10 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
-
+    message = "Give me a number between {low}, and {high}: ".format(low=low,
+                                                                   high=high)
+    input_number = int(input(message))
+    return(input_number)
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
