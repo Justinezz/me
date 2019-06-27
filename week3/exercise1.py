@@ -12,7 +12,7 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    list []
+  
     while start < stop:
         list.append(start)
         start += 1
@@ -36,9 +36,8 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return list = [start, stop]
-    for i in range():
-        print(i)
+    
+    list = [start, stop]
     return list
 
 
@@ -60,7 +59,20 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+
+    is_num = False
+    num = input('please enter a number')
+    final_num = []
+    while is_num == False:
+        try:
+            float(num)
+            print(num)
+            final_num = num
+            is_num = True
+        except ValueError:
+            num = input('please enter a number')
+    
+    return final_num
 
 
 def super_asker(low, high):
