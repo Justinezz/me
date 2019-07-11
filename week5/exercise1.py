@@ -19,7 +19,8 @@ you'll need to figure out for yourself what to do.
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
 # move on, and eventually delete this function. (And this comment!)
-def do_bunch_of_bad_things():
+def do_bunch_of_bad_things(): 
+    countdown("Getting ready to start in", 9, 1, "Let's go!")
     print("Getting ready to start in 9")
     print("Getting ready to start in 8")
     print("Getting ready to start in 7")

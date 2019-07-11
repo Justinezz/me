@@ -93,7 +93,7 @@ def wunderground():
     country = "AU"
     city = "Sydney"
     template = "{base}/{key}/conditions/q/{country}/{city}.json"
-    url = template.format(base=base, key=api_key, country=country, city=city)
+    url = template.format(base=template, key=api_key, country=country, city=city)
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)

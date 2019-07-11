@@ -15,8 +15,8 @@ def loop_ranger(start, stop=None, step=1):
   
     new_list = []
 
-    for i in range(start, stop, step):
-        new_list.append(i)
+    for a_number in range(start, stop, step):
+        new_list.append(a_number)
 
     return new_list
 
@@ -27,6 +27,11 @@ def lone_ranger(start, stop, step):
     Look up the docs for range() and wrap it in a 1:1 way
     """
     
+    new_list = []
+
+    for a_number in range(start, stop, step):
+        new_list.append(a_number)
+
     return range(start, stop, step)
 
 
@@ -84,6 +89,8 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
+
+    
     return None
 
 
