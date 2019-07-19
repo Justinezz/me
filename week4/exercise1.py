@@ -36,7 +36,16 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+
+    lastName = data["results"][0]["name"]["last"]
+    password = data["results"][0]["login"]["passowrd"]
+    the_id = data["results"][0]["id"]["value"]
+    postcode = data["results"][0]["location"]["postcode"]
+
+    pANDid = int(the_id) + int(postcode)
+
+
+    return {"lastName": lastName, "password": passowrd, "postcodePlusID": postcode}
 
 
 def wordy_pyramid():
@@ -88,18 +97,27 @@ def wunderground():
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    base = "http://api.wunderground.com/api/"
-    api_key = "YOUR KEY - REGISTER TO GET ONE"
-    country = "AU"
-    city = "Sydney"
-    template = "{base}/{key}/conditions/q/{country}/{city}.json"
-    url = template.format(base=template, key=api_key, country=country, city=city)
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
-        obs = the_json["current_observation"]
 
-    return {"state": None, "latitude": None, "longitude": None, "local_tz_offset": None}
+    template = "http://pokeapi.co/api/v2/pokeman/{id}"
+
+
+    tallest_pokemon_height = -1
+    tallest_pokemon = None
+    for pokeID in range(low, high):
+        url = template.format(id=pokeID)
+        r = requests.get(url)
+        if r.status_code is 200:
+            one_poke = r.json()
+            if one_poke['height'] > tallest_pokemon_height:
+                tallest_pokemon = one_poke
+                tallest_pokemon_height = one_poke["height"]
+
+
+    return {
+        "name": tallest_pokemon["name"], 
+        "weight": tallest_pokemon["weight"], 
+        "height": tallest_pokemon["height"]
+    }
 
 
 def diarist():
