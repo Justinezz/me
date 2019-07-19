@@ -83,6 +83,10 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &minLength=
     """
+
+    key = "m2h1ionidjnf73ysylqwm7ui7ofs30rcqpi3m4gb8hv9uw9lg"
+    template = "http://api.wordnik.com/v4/words.json/randomWords?api_key=m2h1ionidjnf73ysylqwm7ui7ofs30rcqpi3m4gb8hv9uw9lg&minLength=10&maxLength=10&limit=1"
+
     pass
 
 
