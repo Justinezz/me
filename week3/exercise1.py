@@ -94,11 +94,11 @@ def super_asker(low, high):
     """
 
     while True:
-        num  = not_number_rejector("Enter number:")
+        num  = not_number_rejector(input())
         if low < num < high:
             break
 
-    return None
+    return super_asker
 
 
 if __name__ == "__main__":
