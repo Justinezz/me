@@ -93,11 +93,25 @@ def super_asker(low, high):
     amount of code.
     """
 
+    message = "Give me a number between {low}, and {high}: ".format(low=low,
+                                                                   high=high)
     while True:
-        num  = not_number_rejector(input())
-        if low < num < high:
+        try:
+            int(input(message))
             break
+        except:
+            pass
+    
+    return not_number_rejector
 
+    while True:
+        input_number = int(input(message))
+        if low < input_number < high:
+            break
+    
+    return(input_number)
+
+    
     return super_asker
 
 
