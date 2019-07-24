@@ -32,7 +32,7 @@ def lone_ranger(start, stop, step):
     for a_number in range(start, stop, step):
         new_list.append(a_number)
 
-    return range(start, stop, step)
+    return new_list
 
 
 def two_step_ranger(start, stop):
@@ -55,7 +55,11 @@ def stubborn_asker(low, high):
     """
     message = "Give me a number between {low}, and {high}: ".format(low=low,
                                                                    high=high)
-    input_number = int(input(message))
+    while True:
+        input_number = int(input(message))
+        if low < input_number < high:
+            break
+    
     return(input_number)
 
 def not_number_rejector(message):
@@ -66,19 +70,14 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
 
-    is_num = False
-    num = input('please enter a number')
-    final_num = []
-    while is_num == False:
+    while True:
         try:
-            float(num)
-            print(num)
-            final_num = num
-            is_num = True
-        except ValueError:
-            num = input('please enter a number')
+            int(input(message))
+            break
+        except:
+            pass
     
-    return final_num
+    return not_number_rejector
 
 
 def super_asker(low, high):
@@ -90,7 +89,11 @@ def super_asker(low, high):
     amount of code.
     """
 
-    
+    while True:
+        num  = not_number_rejector("Enter number:")
+        if low < num < high:
+            break
+
     return None
 
 
