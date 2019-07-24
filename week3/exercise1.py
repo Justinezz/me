@@ -42,7 +42,11 @@ def two_step_ranger(start, stop):
     Make a range function that always has a step size of 2
     """
     
-    return range(start, stop, 2)
+    new_list = []
+    for a_number in range(start, stop, 2):
+        new_list.append(a_number)
+
+    return new_list
 
 
 def stubborn_asker(low, high):
