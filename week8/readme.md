@@ -1,1 +1,3 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+
+I went to DIG DAY today, gain more ideas on learning architecture. I think Mitch's web-based diagram is very interesting, it shows 2D and 3D graphics with sliding, it engages designer and reader have better communicaiton. And 3D printing data is also very cool, it makes data be more visualised. Through today's persentations, i realised digital stuff is very important to architecture.
