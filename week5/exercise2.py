@@ -78,10 +78,8 @@ def italian_rules(word):
 
 def abba(source="abba", guard=3):
     """Recursively replace letters acording to the rules.
-
     This function takes a seed string, e.g. "abba" and replaces each letter in
     turn acording to the rules. These rules can be of arbitrary complexity.
-
     Modify the rules to map from:
 
                    abba
@@ -107,9 +105,6 @@ def abba(source="abba", guard=3):
         else:
             return letter
 
-    # write the rest of the function here
-
-    return 
     pass
 
 

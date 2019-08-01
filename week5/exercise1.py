@@ -21,16 +21,9 @@ you'll need to figure out for yourself what to do.
 # move on, and eventually delete this function. (And this comment!)
 def do_bunch_of_bad_things(): 
     countdown("Getting ready to start in", 9, 1, "Let's go!")
-    print("Getting ready to start in 9")
-    print("Getting ready to start in 8")
-    print("Getting ready to start in 7")
-    print("Getting ready to start in 6")
-    print("Getting ready to start in 5")
-    print("Getting ready to start in 4")
-    print("Getting ready to start in 3")
-    print("Getting ready to start in 2")
-    print("Getting ready to start in 1")
-    print("Let's go!")
+    for x in range(10):
+      print("Getting ready to start in", x)
+      print("Let's go!")
 
     triangle = {"base": 3, "height": 4}
     triangle["hypotenuse"] = triangle["base"] ** 2 + triangle["height"] ** 2
@@ -55,8 +48,7 @@ def countdown(message, start, stop, completion_message):
         start = start - 1
         if start == stop:
             print("completion_message")
-
-    break
+       break
 
 
 # TRIANGLES
@@ -69,14 +61,19 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
+    hypoyenuse = base % height
+    print(hypoyenuse)
     pass
 
 
 def calculate_area(base, height):
+    area = base x height
+    print(area)
     pass
 
 
 def calculate_perimeter(base, height):
+    print(base + height + hypotenuse)
     pass
 
 
