@@ -56,6 +56,8 @@ def countdown(message, start, stop, completion_message):
         if start == stop:
             print("completion_message")
 
+    break
+
 
 # TRIANGLES
 
