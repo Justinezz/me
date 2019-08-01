@@ -92,7 +92,7 @@ def wordy_pyramid():
         the_json = json.loads(r.text)
         word = the_json[0]["word"]
 
-    return 
+    return template
 
 
 
