@@ -108,6 +108,8 @@ def abba(source="abba", guard=3):
             return letter
 
     # write the rest of the function here
+
+    return 
     pass
 
 

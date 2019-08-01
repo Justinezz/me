@@ -33,19 +33,17 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
+
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
 
     lastName = data["results"][0]["name"]["last"]
-    password = data["results"][0]["login"]["passowrd"]
-    the_id = data["results"][0]["id"]["value"]
+    password = data["results"][0]["login"]["password"]
+    IDvalue = data["results"][0]["id"]["value"]
     postcode = data["results"][0]["location"]["postcode"]
-
-    pANDid = int(the_id) + int(postcode)
-
-
-    return {"lastName": lastName, "password": passowrd, "postcodePlusID": postcode}
+    postcodePlusID = int(IDvalue) + int(postcode)
+    return {"lastName": lastName, "passowrd": password, "postcodePlusID": postcode}
 
 
 def wordy_pyramid():
@@ -83,9 +81,8 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &minLength=
     """
-
-    template = "http://api.wordnik.com/v4/words.json/randomWords?api_key=m2h1ionidjnf73ysylqwm7ui7ofs30rcqpi3m4gb8hv9uw9lg&minLength={length}&maxLength={length2}&limit=1"
-    url = template.format(length=1, length2 = 2 )
+    template = "http://http://api.wordnik.com/v4/words.json/randomWords?api_key=m2h1ionidjnf73ysylqwm7ui7ofs30rcqpi3m4gb8hv9uw9lg"
+    url = template.format(length=1, length2 =2 )
     print(url)
     r = requests.get(url)
     if r.status_code is 200:
