@@ -89,8 +89,9 @@ def pet_filter(letter="a"):
 
     # for letter in name
 
-    for letter in pets:
-        return [letter]
+    filter = [k for k in pets if letter in k]
+
+    return filter
 
 
 def best_letter_for_pets():
@@ -102,7 +103,7 @@ def best_letter_for_pets():
 
     the_alphabet = string.ascii_lowercase
 
-    return ""
+    return "the_alphabet"
 
 
 def make_filler_text_dictionary():
