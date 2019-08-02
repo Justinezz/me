@@ -17,10 +17,9 @@ def greet(name="Towering Timmy"):
     return a string of "Hello" and the name argument.
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
-    greet = "Hello"
-    name = str(input(message))
-    
-    return greet + name
+    say_hello = "Hello " + name
+   
+    return say_hello
 
 
 def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
@@ -90,7 +89,7 @@ def pet_filter(letter="a"):
 
     # for letter in name
 
-    return []
+    return ["1"]
 
 
 def best_letter_for_pets():
