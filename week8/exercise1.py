@@ -69,9 +69,9 @@ def put_behind_bars(input_string="very naughty boy"):
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a pipe on both ends of the string.
     """
-    #input_string = 
+    input_string = "|" + "|".join(input_string) + "|"
 
-    return 
+    return input_string
 
 
 def pet_filter(letter="a"):
