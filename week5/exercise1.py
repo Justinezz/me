@@ -48,7 +48,7 @@ def countdown(message, start, stop, completion_message):
         start = start - 1
         if start == stop:
             print("completion_message")
-       break
+            break
 
 
 # TRIANGLES
@@ -67,13 +67,13 @@ def calculate_hypotenuse(base, height):
 
 
 def calculate_area(base, height):
-    area = base x height
+    area = base * height
     print(area)
     pass
 
 
 def calculate_perimeter(base, height):
-    print(base + height + hypotenuse)
+    print(base + height)
     pass
 
 
