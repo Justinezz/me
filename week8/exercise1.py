@@ -18,7 +18,7 @@ def greet(name="Towering Timmy"):
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
     greet = "Hello"
-    name = str(input("Enter your name:"))
+    name = str(input(message))
     
     return greet + name
 
@@ -28,8 +28,8 @@ def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 5
     """
-    count = 3
 
+    count = input_list.count(3)
 
     return count
 
@@ -79,7 +79,7 @@ def pet_filter(letter="a"):
             "hedgehog","guppy",]
     # fmt: on
 
-    for letter in name
+    # for letter in name
 
     return []
 
