@@ -89,7 +89,8 @@ def pet_filter(letter="a"):
 
     # for letter in name
 
-    return ["1"]
+    for letter in pets:
+        return [letter]
 
 
 def best_letter_for_pets():
@@ -146,7 +147,9 @@ def random_filler_text(number_of_words=200):
     """
     import random
 
-    return ""
+    random = random.randint(0, len(list) - 1)
+    return True
+
 
 
 def fast_filler(number_of_words=200):
@@ -163,6 +166,8 @@ def fast_filler(number_of_words=200):
 
     If you get this one to work, you are a Very Good Programmer™!
     """
+
+    paragraph = list(number_of_words)
 
     return paragraph
 
