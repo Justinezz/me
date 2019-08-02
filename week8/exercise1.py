@@ -47,9 +47,17 @@ def fizz_buzz():
     """
     fizzBuzzList = []
     # your code here
+    for input in range(1,101):
 
+        if input % 3 == 0 and input % 5 == 0:
+            fizzBuzzList.append("FizzBuzz")
+        elif input % 5 == 0:
+            fizzBuzzList.append("Buzz")
+        elif input % 3 == 0:
+            fizzBuzzList.append("Fizz")
+        else:
+            fizzBuzzList.append(input)
     return fizzBuzzList
-
 
 def put_behind_bars(input_string="very naughty boy"):
     """Interleave the input_string with pipes.
@@ -61,8 +69,9 @@ def put_behind_bars(input_string="very naughty boy"):
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a pipe on both ends of the string.
     """
+    #input_string = 
 
-    return ""
+    return 
 
 
 def pet_filter(letter="a"):
